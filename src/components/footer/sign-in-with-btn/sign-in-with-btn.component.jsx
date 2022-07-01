@@ -1,11 +1,12 @@
 import './sign-in-with-btn.styles.scss';
+
 import {
     Imdb,
     Apple,
     Facebook,
     Google,
     Amazon
-} from '../../index';
+} from '../../../index';
 
 const SignInWithBtn = ({ title, signInWith }) => {
 

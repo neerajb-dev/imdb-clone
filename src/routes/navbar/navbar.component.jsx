@@ -1,8 +1,18 @@
+import { useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
-import Footer from '../../components/footer/footer';
+import { MenuDrawer } from '../../components/menuDrawer/menu-drawer.component';
 import "./navbar.styles.scss";
 
 const Navbar = () => {
+
+    const [showMenu, setShowMenu] = useState(false);
+
+    const handleMenu = () => {
+        setShowMenu(!showMenu);
+    }
+
+    console.log(showMenu);
+
     return (
         <div className="navbar-container">
             <nav className="navbar navbar-expand-lg bg-light shadow">
@@ -33,6 +43,9 @@ const Navbar = () => {
                             <li className="nav-item">
                                 <Link to="/sign-in" className="nav-link">Sign In</Link>
                             </li>
+                            <li>
+                                <button className="btn btn-light" onClick={handleMenu}>Menu</button>
+                            </li>
                         </ul>
                         <form className="d-flex" role="search">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
@@ -42,9 +55,11 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            <Outlet />
+            {
+                showMenu && <MenuDrawer handleMenu={handleMenu} /> 
+            }
 
-            <Footer />
+            <Outlet />
         </div>
 
     )
