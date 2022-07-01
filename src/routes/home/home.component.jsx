@@ -4,8 +4,7 @@ import Footer from "../../components/footer/footer";
 const Home = () => {
     return (
         <div className="home">
-
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 };
