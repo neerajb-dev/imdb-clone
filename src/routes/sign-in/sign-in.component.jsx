@@ -5,6 +5,11 @@ import SignInWithBtn from "../../components/footer/sign-in-with-btn/sign-in-with
 import './sign-in.styles.scss';
 
 const SignIn = () => {
+
+    const handleClick = () => {
+        console.log("clicked");
+    }
+    
     return (
         <div className="signIn-page d-flex justify-content-center flex-column">
             <div className="container-fluid signIn-container">
@@ -19,7 +24,7 @@ const SignIn = () => {
                                 <SignInWithBtn title='Google' signInWith='google' />
                                 <SignInWithBtn title='Facebook' signInWith='facebook' />
 
-                                <Button btnType="create_account" btnText="Create a New account" />
+                                <Button btnType="create_account" btnText="Create a New account" onClick={handleClick} />
                             </div>
                         </div>
 
