@@ -38,8 +38,9 @@ const Slider = () => {
 
     return (
 
-        <div className="slider overflow-x container" style={{ overflowX: "scroll" }}>
-            <div className="d-flex flex-column flex-sm-row flex-nowrap">
+        <div className="slider overflow-x container p-0" style={{ overflowX: "scroll"}}>
+            {/* <div className="d-flex flex-sm-row flex-nowrap"> */}
+            <div className="row flex-sm-row flex-nowrap">
                 <Card img={gray} title='The Gray Man' link='https://www.youtube.com/watch?v=BmllggGO4pM' />
                 <Card img={thor} title='Thor Love and Thunder' link='https://www.youtube.com/watch?v=S5bVvAHLUYY' />
                 <Card img={jurassic} title='Jurassic World Dominion' link='https://www.youtube.com/watch?v=DtQycgMD4HQ' />

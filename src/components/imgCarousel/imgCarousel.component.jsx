@@ -1,9 +1,9 @@
 import { jurasic_world, the_gray_man, thor_love } from "../../assets/carousal_img";
 import "./imgCarousel.styles.scss";
 
-const ImgCarousel = ({ className }) => {
+const ImgCarousel = () => {
     return (
-        <div className="col-12 p-2">
+        <div className="col-md-8 p-2">
             <div id="carouselExampleControls" className="carousel slide bg-slider" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">

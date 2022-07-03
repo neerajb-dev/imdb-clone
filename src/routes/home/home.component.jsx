@@ -7,13 +7,11 @@ const Slider = React.lazy(() => import("../../components/slider/slider.component
 const Home = () => {
     return (
         <div className="home">
-            <div className="container">
-                <div className="row">
-                    <React.Suspense fallback="Loading..." >
-                        <ImgCarousel />
-                        <Slider />
-                    </React.Suspense>
-                </div>
+            <div className="row g-0 justify-content-center">
+                <React.Suspense fallback="Loading..." >
+                    <ImgCarousel />
+                    <Slider />
+                </React.Suspense>
             </div>
             <Footer />
         </div>
