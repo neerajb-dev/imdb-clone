@@ -4,7 +4,7 @@ const Button = ({ btnType, btnText, onClick, Icon }) => {
 
     const BTN_TYPE = {
         create_account: 'create-account-btn',
-        nav_menu_btn: 'nav-menu-btn btn-dark',
+        nav_menu_btn: 'nav-menu-btn btn-dark d-none d-lg-block',
         sign_in_btn: 'sign-in-btn btn-dark'
     }
 

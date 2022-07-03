@@ -21,12 +21,10 @@ const Navbar = () => {
         navigate("/sign-in");
     }
 
-    console.log(showMenu);
-
     return (
         <div className="navbar-container">
             <nav className="navbar navbar-expand-lg bg-dark shadow">
-                <div className="container d-flex justify-content-center align-items-center">
+                <div className="container d-flex justify-content-between justify-content-md-center align-items-center">
                     <Link to="/"><img src={BrandLogo} alt="imdb-logo" className="navbar-brand" width={"80px"} /></Link>
                     <Button onClick={handleMenu} btnText='Menu' btnType='nav_menu_btn' Icon={<GiHamburgerMenu size="24px" className="me-2" />} />
                     <SearchBox />

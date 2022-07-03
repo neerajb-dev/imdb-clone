@@ -1,15 +1,18 @@
+import React from "react";
 import "./home.styles.scss";
 import Footer from "../../components/footer/footer";
-import ImgCarousel from "../../components/imgCarousel/imgCarousel.component";
-import Slider from "../../components/slider/slider.component";
+const ImgCarousel = React.lazy(() => import("../../components/imgCarousel/imgCarousel.component"));
+const Slider = React.lazy(() => import("../../components/slider/slider.component"));
 
 const Home = () => {
     return (
         <div className="home">
             <div className="container">
                 <div className="row">
-                    <ImgCarousel />
-                    <Slider />
+                    <React.Suspense fallback="Loading..." >
+                        <ImgCarousel />
+                        <Slider />
+                    </React.Suspense>
                 </div>
             </div>
             <Footer />

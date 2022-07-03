@@ -7,13 +7,13 @@ const ImgCarousel = ({ className }) => {
             <div id="carouselExampleControls" className="carousel slide bg-slider" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src={jurasic_world} className="d-block w-100" alt="..." />
+                        <img src={jurasic_world} className="d-block w-100" alt="..." loading="lazy" />
                     </div>
                     <div className="carousel-item">
-                        <img src={the_gray_man} className="d-block w-100" alt="..." />
+                        <img src={the_gray_man} className="d-block w-100" alt="..." loading="lazy" />
                     </div>
                     <div className="carousel-item">
-                        <img src={thor_love} className="d-block w-100" alt="..." />
+                        <img src={thor_love} className="d-block w-100" alt="..." loading="lazy" />
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

@@ -4,7 +4,7 @@ import './search-box.styles.scss';
 
 export const SearchBox = () => {
     return (
-        <div className="search-box input-group mx-2 container">
+        <div className="search-box input-group mx-2 container d-none d-md-flex">
             <span className="input-group-text fw-bold">All <MdOutlineArrowDropDown size="24px"/> </span>
             <input type="text" className="form-control" placeholder="Search IMDb" />
             <button className='search-btn btn btn-light'>
