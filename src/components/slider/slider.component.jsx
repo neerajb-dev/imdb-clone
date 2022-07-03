@@ -1,11 +1,15 @@
+import React from "react";
 // import { useEffect, useState } from "react";
 // import axios from "axios";
-import Card from "../card/card.component";
 import {
     gray,
     thor,
     jurassic
 } from "../../assets/slider_images";
+
+import Card from "../card/card.component";
+
+const LazyCard = React.lazy(() => import("../card/card.component"));
 
 const Slider = () => {
 
@@ -34,17 +38,19 @@ const Slider = () => {
 
     return (
 
-        <div className="slider col-12 overflow-x" style={{ overflowX: "scroll" }}>
-            <div className="row flex-nowrap ">
+        <div className="slider overflow-x container" style={{ overflowX: "scroll" }}>
+            <div className="d-flex flex-column flex-sm-row flex-nowrap">
                 <Card img={gray} title='The Gray Man' link='https://www.youtube.com/watch?v=BmllggGO4pM' />
                 <Card img={thor} title='Thor Love and Thunder' link='https://www.youtube.com/watch?v=S5bVvAHLUYY' />
                 <Card img={jurassic} title='Jurassic World Dominion' link='https://www.youtube.com/watch?v=DtQycgMD4HQ' />
                 <Card img={gray} title='The Gray Man' link='https://www.youtube.com/watch?v=BmllggGO4pM' />
-                <Card img={thor} title='Thor Love and Thunder' link='https://www.youtube.com/watch?v=S5bVvAHLUYY' />
-                <Card img={jurassic} title='Jurassic World Dominion' link='https://www.youtube.com/watch?v=DtQycgMD4HQ' />
-                <Card img={gray} title='The Gray Man' link='https://www.youtube.com/watch?v=BmllggGO4pM' />
-                <Card img={thor} title='Thor Love and Thunder' link='https://www.youtube.com/watch?v=S5bVvAHLUYY' />
-                <Card img={jurassic} title='Jurassic World Dominion' link='https://www.youtube.com/watch?v=DtQycgMD4HQ' />
+                <React.Suspense fallback="loading...">
+                    <LazyCard img={thor} title='Thor Love and Thunder' link='https://www.youtube.com/watch?v=S5bVvAHLUYY' />
+                    <LazyCard img={jurassic} title='Jurassic World Dominion' link='https://www.youtube.com/watch?v=DtQycgMD4HQ' />
+                    <LazyCard img={gray} title='The Gray Man' link='https://www.youtube.com/watch?v=BmllggGO4pM' />
+                    <LazyCard img={thor} title='Thor Love and Thunder' link='https://www.youtube.com/watch?v=S5bVvAHLUYY' />
+                    <LazyCard img={jurassic} title='Jurassic World Dominion' link='https://www.youtube.com/watch?v=DtQycgMD4HQ' />
+                </React.Suspense>
             </div>
         </div>
     )
