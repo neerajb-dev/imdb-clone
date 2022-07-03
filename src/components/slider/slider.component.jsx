@@ -1,0 +1,53 @@
+// import { useEffect, useState } from "react";
+// import axios from "axios";
+import Card from "../card/card.component";
+import {
+    gray,
+    thor,
+    jurassic
+} from "../../assets/slider_images";
+
+const Slider = () => {
+
+    // const [popularMovies, setPopularMovies] = useState();
+
+    // useEffect(() => {
+    //     getPopularMovies();
+    // }, [])
+
+    // const getPopularMovies = () => {
+
+    //     const API_KEY = 'f330302bb5602503687ce4df766e48e2';
+    //     const BASE_URL = 'https://api.themoviedb.org/3/';
+    //     const API_URL = BASE_URL + `movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+
+    //     axios.get(API_URL)
+    //         .then(res => {
+    //             if (res.data) {
+    //                 setPopularMovies(res.data);
+    //             }
+    //         })
+    //         .catch()
+    // }
+
+    // const IMG_URL = `https://image.tmdb.org/t/p/w500/`
+
+    return (
+
+        <div className="slider col-12 overflow-x" style={{ overflowX: "scroll" }}>
+            <div className="row flex-nowrap ">
+                <Card img={gray} title='The Gray Man' link='https://www.youtube.com/watch?v=BmllggGO4pM' />
+                <Card img={thor} title='Thor Love and Thunder' link='https://www.youtube.com/watch?v=S5bVvAHLUYY' />
+                <Card img={jurassic} title='Jurassic World Dominion' link='https://www.youtube.com/watch?v=DtQycgMD4HQ' />
+                <Card img={gray} title='The Gray Man' link='https://www.youtube.com/watch?v=BmllggGO4pM' />
+                <Card img={thor} title='Thor Love and Thunder' link='https://www.youtube.com/watch?v=S5bVvAHLUYY' />
+                <Card img={jurassic} title='Jurassic World Dominion' link='https://www.youtube.com/watch?v=DtQycgMD4HQ' />
+                <Card img={gray} title='The Gray Man' link='https://www.youtube.com/watch?v=BmllggGO4pM' />
+                <Card img={thor} title='Thor Love and Thunder' link='https://www.youtube.com/watch?v=S5bVvAHLUYY' />
+                <Card img={jurassic} title='Jurassic World Dominion' link='https://www.youtube.com/watch?v=DtQycgMD4HQ' />
+            </div>
+        </div>
+    )
+};
+
+export default Slider;
